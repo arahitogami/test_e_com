@@ -3,11 +3,15 @@ services:
   mongo:
     image: mongo:7.0-rc-jammy
     restart: always
+    env_file:
+      - ./.env
     environment:
       MONGO_INITDB_ROOT_USERNAME: root
       MONGO_INITDB_ROOT_PASSWORD: example
+    volumes:
+      - mongo_db:/data/db
     ports:
-      - 27017:27017
+      - "27017:27017"
 
   app:
     build:
@@ -16,10 +20,13 @@ services:
     container_name: form-app
     volumes:
       - ./:/code
-#    env_file:
-#      - ./.env
+    env_file:
+      - .env
     ports:
       - "8000:8000"
     restart: always
     depends_on:
       - mongo
+
+volumes:
+  mongo_db:
