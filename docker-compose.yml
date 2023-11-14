@@ -1,0 +1,25 @@
+version: '3.8'
+services:
+  mongo:
+    image: mongo:7.0-rc-jammy
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: example
+    ports:
+      - 27017:27017
+
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: form-app
+    volumes:
+      - ./:/code
+#    env_file:
+#      - ./.env
+    ports:
+      - "8000:8000"
+    restart: always
+    depends_on:
+      - mongo
