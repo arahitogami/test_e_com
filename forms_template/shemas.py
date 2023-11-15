@@ -109,4 +109,6 @@ class Items(BaseModel):
     def validate_all(cls, values: dict):
         if values.get('name'):
             raise ValueError('Нельзя передавать поле с именем "name".')
+        elif values.get('_id'):
+            raise ValueError('Нельзя передавать поле с именем "name".')
         return DataItem(data=values).data
