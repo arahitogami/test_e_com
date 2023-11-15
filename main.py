@@ -8,7 +8,9 @@ from forms_template.database import db_template
 from forms_template.shemas import Items
 from forms_template.utils import find_document
 
-app = FastAPI()
+app = FastAPI(
+    title="e.com-test"
+)
 
 
 @app.post("/get_form/", responses=dict())
