@@ -18,7 +18,6 @@ if __name__ == '__main__':
         "field_phone": "+79999999999",
         "field_email": "kjkjfgh@dsfsfd.ty",
         "field_text": "+792311111112",
-        "field_date": "01.03.2078",
         "field_date2": "2025-06-17",
     }
     loop = asyncio.get_event_loop()
