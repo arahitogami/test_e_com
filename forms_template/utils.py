@@ -65,7 +65,7 @@ async def _match_document(
             case {'_id': id, 'name': name, **kwargs} if all(
                     item in items.items() for item in kwargs.items()
             ):
-                if len(document) > len(result):
+                if (len(document)-1) > len(result):
                     result = {'name': name, **kwargs}
             case _:
                 if exclude_id:
