@@ -70,6 +70,9 @@ Web-приложение для определения заполненных ф
 ## Author
 [Kuzmenko Nikita](https://github.com/arahitogami)
 
+## P.S.
+На заметку тем, кто будет смотреть это тестовое задание. 
+Обратной связи от компании (Code Review) не поступало, поэтому я не знаю, насколько хорошо или плохо было выполнено задание.
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
